@@ -1,5 +1,5 @@
-# [Name here]
-**[Name here]** is a fully-functional DApp (Decentralized Application) consisting of Solidity smart contract in the Ethereum blockchain + client-side app (UI) and server-side logic (todo). The [name here] keeps some data and logic in the Ethereum blockchain and provides UI to access it.
+# MeowMeow
+**MeowMeow** is a fully-functional DApp (Decentralized Application) consisting of Solidity smart contract in the Ethereum blockchain + client-side app (UI with ReactJS) and server-side logic (Java). The MeowMeow keeps some data and logic in the Ethereum blockchain and provides UI to access it.
 
 ## General Requirements
 - Smart contracts, implemented in Solidity, deployed in the Robsten testnet
@@ -9,14 +9,15 @@
 - Server-side logic - (todo - technologies here)
 
 ## Business Logic
-- *Guests* can view the *users* and their *items* listed for *selling* 
-  - they don't see their contracts and addresses
-- *Guests* can register as *users* and *purchase* *items* 
-  - when the *item is purchased* the payment is send to the smart contract
-  - the smart contract retain *5% as commision*
-- *Users* register and list *items* for *sale* in the Ethereum blockchain
-  - each *item* consists JSON document + image in IPFS
-  - each *user* holds in a smart contract a list of IPFS hashes of the *items for sale*
+- *Guests* can view the *organizations* and their *cats* listed for *adoption* 
+  - They don't see their contracts and addresses
+- *Guests* can register as *users* and *adopt cats*
+  - When the *cat is adopted* the payment is send to the smart contract
+  - The smart contract retain *5% as commision*
+- *Organizations* register and list *cats* for *adoption* in the Ethereum blockchain
+  - Each *cat* consists JSON document + image in IPFS
+  - Each *organization* holds in a smart contract a list of IPFS hashes of the *cats for adoption*
+- *Organizations* should have Ethereum address, don't need to have a wallet
 - *Users* should have a wallet
   - *JS wallet or MetaMask*
   - Transaction signing is in the client-side
