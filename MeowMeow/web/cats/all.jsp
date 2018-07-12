@@ -19,11 +19,11 @@
 <% AdoptionCatRepository cats = (AdoptionCatRepository) application.getAttribute("cats"); %>
 <% for(AdoptionCat cat : cats.all()) { %>
 <h3>
-    <a href="/cats/profile?catName=<%= cat.getName()%>"><%= cat.getName()%></a>
+    <a href="profile.jsp?catName=<%= cat.getName()%>"><%= cat.getName()%></a>
 </h3>
 <% } %>
 
 <br />
-<a href="/">Back to Home</a>
+<a href="../home">Back to Home</a>
 </body>
 </html>

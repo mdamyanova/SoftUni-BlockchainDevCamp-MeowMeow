@@ -1,6 +1,8 @@
 package org.meow.meow.servlets;
 
 import org.meow.meow.repos.AdoptionCatRepository;
+import org.meow.meow.services.implementations.CatContractServiceImpl;
+import org.meow.meow.services.interfaces.CatContractService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

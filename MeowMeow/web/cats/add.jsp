@@ -14,11 +14,13 @@
 <body>
 <h1>Add Cat for Adoption</h1>
 <br/>
-<form method="post" action="/cats/create">
-    Name: <input type="text" name="name" /><br/>
+<form method="post" action="add">
+    Name: <label>
+            <input type="text" name="name" />
+          </label><br/>
     <button type="submit">Create Cat</button>
 </form>
 <br/>
-<a href="/">Back to Home</a>
+<a href="../home">Back to Home</a>
 </body>
 </html>

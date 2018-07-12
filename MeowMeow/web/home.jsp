@@ -13,9 +13,10 @@
 </head>
 <body>
 <h1>Welcome to MeowMeow</h1>
-<a href="./home.jsp">Home</a>
-<a href="cats/all.jsp">Cats for Adoption</a>
-<a href="cats/add.jsp">Add Cat</a>
-<a href="./about.jsp">About</a>
+<a href="./home">Home</a>
+<a href="cats/all">Cats for Adoption</a>
+<a href="cats/add">Add Cat</a>
+<a href="./about">About</a>
+<script src="app.js"></script>
 </body>
 </html>

@@ -24,6 +24,6 @@
 <% } %>
 
 <br />
-<a href="/cats/all">Back</a>
+<a href="all">Back</a>
 </body>
 </html>

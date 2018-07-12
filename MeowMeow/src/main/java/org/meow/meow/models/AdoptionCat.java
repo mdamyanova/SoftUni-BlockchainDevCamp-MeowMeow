@@ -2,13 +2,25 @@ package org.meow.meow.models;
 
 import org.meow.meow.models.enums.Gender;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Size;
+
+import static org.meow.meow.models.validation.ValidationConstants.*;
+
 public class AdoptionCat {
+    @Size(min=NAME_MIN, max=NAME_MAX)
     private String name;
+    @Min(AGE_MIN)
+    @Max(AGE_MAX)
     private int age;
     private Gender gender;
+    @Size(min=TOWN_MIN, max=TOWN_MAX)
     private String town;
+    @Size(max=DESCRIPTION_MAX)
     private String description;
     private String imageHash;
+    // TODO - Custom validation
     private String organization;
 
     public AdoptionCat(String name, int age, Gender gender,
