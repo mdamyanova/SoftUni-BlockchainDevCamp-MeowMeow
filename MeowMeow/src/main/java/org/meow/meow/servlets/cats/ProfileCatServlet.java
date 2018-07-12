@@ -7,10 +7,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/cats/all")
-public class AllCatsServlet extends HttpServlet {
+// TODO
+@WebServlet("/cats/profile")
+public class ProfileCatServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("cats/all.jsp").forward(req, resp);
+        req.getRequestDispatcher("cats/profile.jsp").forward(req, resp);
     }
 }

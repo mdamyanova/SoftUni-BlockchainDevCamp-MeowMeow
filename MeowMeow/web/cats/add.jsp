@@ -1,21 +1,24 @@
 <%--
   Created by IntelliJ IDEA.
   User: MirelaDamyanova
-  Date: 11-Jul-18
-  Time: 23:03
+  Date: 12-Jul-18
+  Time: 02:21
   To change this template use File | Settings | File Templates.
 --%>
+<!--TODO-->
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>MeowMeow</title>
-    <link rel="stylesheet" href="bootstrap.min.css">
 </head>
 <body>
-<h1>Welcome to MeowMeow</h1>
-<a href="./home.jsp">Home</a>
-<a href="cats/all.jsp">Cats for Adoption</a>
-<a href="cats/add.jsp">Add Cat</a>
-<a href="./about.jsp">About</a>
+<h1>Add Cat for Adoption</h1>
+<br/>
+<form method="post" action="/cats/create">
+    Name: <input type="text" name="name" /><br/>
+    <button type="submit">Create Cat</button>
+</form>
+<br/>
+<a href="/">Back to Home</a>
 </body>
 </html>
