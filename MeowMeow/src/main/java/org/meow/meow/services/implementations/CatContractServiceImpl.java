@@ -2,7 +2,6 @@ package org.meow.meow.services.implementations;
 
 import org.meow.meow.contracts.Cat_sol_Cat;
 import org.meow.meow.models.AdoptionCat;
-import org.meow.meow.models.enums.Gender;
 import org.meow.meow.repos.AdoptionCatRepository;
 import org.meow.meow.services.interfaces.CatContractService;
 import org.web3j.protocol.Web3j;
@@ -11,7 +10,9 @@ import org.web3j.protocol.http.HttpService;
 import org.web3j.crypto.Credentials;
 import org.web3j.tx.Contract;
 import org.web3j.tx.ManagedTransaction;
+import org.web3j.utils.Convert;
 
+import java.math.BigDecimal;
 import java.math.BigInteger;
 
 public class CatContractServiceImpl implements CatContractService {
@@ -40,18 +41,31 @@ public class CatContractServiceImpl implements CatContractService {
     }
 
     @Override
-    public void donate(int amount) {
-        // TODO
+    public void donate(BigInteger amount) throws Exception {
+        // TODO - Check if this actually works :D
+        BigDecimal toWei = Convert.fromWei(amount.toString(), Convert.Unit.ETHER);
+        TransactionReceipt txInfo = this.contract
+                .donate(amount, toWei.toBigInteger())
+                .send();
+        this.printTxInfo(txInfo);
     }
 
     @Override
-    public int getAllDonations() {
-        return 0; // TODO
+    public BigInteger getAllDonations() throws Exception {
+        BigInteger allDonations = this.contract
+                .allDonations().send();
+        return allDonations;
     }
 
     @Override
     public AdoptionCat byName(String name) {
-        return this.repository.byName(name);
+        // TODO - This is nasty
+        AdoptionCat cat = this.repository.byName(name);
+        // int index = this.repository.all().indexOf(cat);
+        return cat;
+        //RemoteCall<Tuple6<String, BigInteger, String, String, String, String>> tuple =
+        //        this.contract.info(cat.getOrganization(), BigInteger.valueOf(index));
+
     }
 
     @Override
@@ -60,18 +74,27 @@ public class CatContractServiceImpl implements CatContractService {
                 .add(
                         cat.getName(),
                         cat.getAge(),
-                        cat.getGender(), // TODO
+                        cat.getGender(),
                         cat.getTown(),
                         cat.getDescription(),
                         cat.getImageHash(),
                         cat.getOrganization()
                 )
                 .send();
-        System.out.println("Transaction:\n" + txInfo);
+        this.printTxInfo(txInfo);
     }
 
     @Override
-    public void adopt(String name) {
-        // TODO
+    public void adopt(String name) throws Exception {
+        AdoptionCat cat = this.repository.byName(name);
+        int index = this.repository.all().indexOf(cat);
+        TransactionReceipt txInfo = this.contract
+                .adopt(cat.getOrganization(), BigInteger.valueOf(index))
+                .send();
+        this.printTxInfo(txInfo);
+    }
+
+    private void printTxInfo(TransactionReceipt txInfo) {
+        System.out.println("Transaction:\n" + txInfo);
     }
 }

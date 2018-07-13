@@ -1,22 +1,18 @@
 package org.meow.meow.repos;
 
 import org.meow.meow.models.AdoptionCat;
-import org.meow.meow.services.implementations.CatContractServiceImpl;
-import org.meow.meow.services.interfaces.CatContractService;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class AdoptionCatRepository  {
-    private Set<AdoptionCat> cats;
+    private ArrayList<AdoptionCat> cats;
 
     public AdoptionCatRepository() {
-        this.cats = new HashSet<>();
+        this.cats = new ArrayList<>();
     }
 
-    public Set<AdoptionCat> all() {
-        return Collections.unmodifiableSet(this.cats);
+    public List<AdoptionCat> all() {
+        return Collections.unmodifiableList(this.cats);
     }
     public void add(AdoptionCat cat) {
         this.cats.add(cat);
