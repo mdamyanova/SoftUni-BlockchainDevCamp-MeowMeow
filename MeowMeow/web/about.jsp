@@ -11,41 +11,40 @@
 <head>
     <meta charset="UTF-8">
     <title>MeowMeow</title>
-    <link rel="stylesheet" href="gadgets/normalize/normalize.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="gadgets/aos/dist/aos.css" />
-    <link rel="stylesheet" href="assets/styles/style.css">
-    <link rel="stylesheet" href="assets/styles/about-me.css">
-    <link rel="stylesheet" href="gadgets/scrolling-nav/css/scrolling-nav.css">
+    <style type="text/css">
+        <%@include file="assets/styles/style.css" %>
+        <%@include file="assets/styles/about.css" %>
+        <%@include file="gadgets/normalize/normalize.css" %>
+    </style>
 </head>
-<body>
-<nav class="navbar fixed-top navbar-toggleable-md navbar-light bg-faded" id="nav-bar-ella">
-
-    <!--collapse the nav-bar for small screens-->
-    <div class="navbar-header">
-        <a class="navbar-brand" href="home">MeowMeow<span class="hearts">*</span></a>
-        <button class="navbar-toggler navbar-toggler-right"
-                type="button"
-                data-toggle="collapse"
-                data-target="#nav-bar-items"
-                aria-controls="nav-bar-items"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">MeowMeow<span class="hearts">*</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-
         </button>
-    </div>
-
-    <!--the actual nav-bar-->
-    <div class="collapse navbar-collapse justify-content-end" id="nav-bar-items">
-        <ul class="nav navbar-nav navbar-small">
-            <li class="nav-item"><a class="nav-link" href="home">home</a></li>
-            <li class="nav-item"><a class="nav-link" target="_blank" href="http://github.com/mdamyanova">github</a></li>
-        </ul>
-    </div>
-</nav>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="home">home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cats/all">cats</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cats/add">add cat</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="about">about</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<body>
 <main>
     <div class="animated fadeIn" id="section-one">
         <a id="home" class="smooth"></a>
@@ -69,14 +68,11 @@
 </footer>
 </body>
 </html>
-<script src="assets/scripts/app.js"></script>
+<script>
+    <%@include file="assets/scripts/app.js" %>
+</script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
         integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
-<script src="gadgets/aos/dist/aos.js"></script>
-<script src="gadgets/scrolling-nav/vendor/jquery-easing/jquery.easing.min.js"></script>
-<script src="gadgets/scrolling-nav/js/scrolling-nav.js"></script>
