@@ -1,6 +1,8 @@
 package org.meow.meow.repos;
 
 import org.meow.meow.models.AdoptionCat;
+import org.meow.meow.services.implementations.CatContractServiceImpl;
+import org.meow.meow.services.interfaces.CatContractService;
 
 import java.util.Collections;
 import java.util.HashSet;

@@ -14,7 +14,7 @@ public class AdoptionCat {
     @Min(AGE_MIN)
     @Max(AGE_MAX)
     private int age;
-    private Gender gender;
+    private String gender;
     @Size(min=TOWN_MIN, max=TOWN_MAX)
     private String town;
     @Size(max=DESCRIPTION_MAX)
@@ -23,7 +23,7 @@ public class AdoptionCat {
     // TODO - Custom validation
     private String organization;
 
-    public AdoptionCat(String name, int age, Gender gender,
+    public AdoptionCat(String name, int age, String gender,
                        String town, String description, String imageHash, String organization) {
         this.name = name;
         this.age = age;
@@ -50,11 +50,11 @@ public class AdoptionCat {
         this.age = age;
     }
 
-    public Gender getGender() {
+    public String getGender() {
         return this.gender;
     }
 
-    public void setGender(Gender gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
