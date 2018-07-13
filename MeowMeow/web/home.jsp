@@ -16,12 +16,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style type="text/css">
         <%@include file="assets/styles/style.css" %>
-        <%@include file="gadgets/normalize/normalize.css" %>
+        <%@include file="assets/styles/background.css" %>
+        <%@include file="assets/styles/normalize.css" %>
     </style>
 </head>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">MeowMeow<span class="hearts">*</span></a>
+        <a class="navbar-brand" href="home">MeowMeow<span class="hearts">*</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -44,8 +45,16 @@
     </nav>
 </header>
 <body>
-<main>
-
+<div id="metamask-warning" class="alert alert-danger" style="display: none"></div>
+<main id="main-content">
+    <div class="text-center meow-center">
+        <h1 class="text-on-form">Hello, human! Welcome to MeowMeow!</h1>
+        <form method="post" action="donate">
+            <label class="sr-only">Amount: </label>
+            <input type="number" class="form-control col-4 offset-4" name="amount">
+            <button type="submit" class="btn btn-default mb-2">donate</button>
+        </form>
+    </div>
 </main>
 </body>
 </html>

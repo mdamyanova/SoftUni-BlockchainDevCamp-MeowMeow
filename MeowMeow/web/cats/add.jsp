@@ -16,12 +16,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style type="text/css">
         <%@include file="../assets/styles/style.css" %>
-        <%@include file="../gadgets/normalize/normalize.css" %>
+        <%@include file="../assets/styles/normalize.css" %>
     </style>
 </head>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">MeowMeow<span class="hearts">*</span></a>
+        <a class="navbar-brand" href="../home">MeowMeow<span class="hearts">*</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -44,7 +44,8 @@
     </nav>
 </header>
 <body>
-<main>
+<div id="metamask-warning" class="alert alert-danger" style="display: none"></div>
+<main id="main-content">
     <h1>Add Cat for Adoption</h1>
     <br/>
     <form method="post" action="add">
@@ -81,7 +82,7 @@
         <div class="form-group row">
             <label class="col-2 col-form-label">Image: </label>
             <div class="col-10">
-                <!--TODO-->
+                <input class="form-control" type="file" name="name">
             </div>
         </div>
         <div class="form-group row">

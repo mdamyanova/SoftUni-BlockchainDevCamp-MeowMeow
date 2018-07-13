@@ -1,0 +1,13 @@
+body {
+    top: -20px;
+    left: -20px;
+    right: -40px;
+    bottom: -40px;
+    width: auto;
+    height: auto;
+    /*TODO*/
+    background-image: url(https://raw.githubusercontent.com/mdamyanova/Meow/master/Meow/Meow.Web/wwwroot/images/weird-girl.jpg);
+    background-size: cover;
+    z-index: 0;
+    color: white;
+}

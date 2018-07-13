@@ -1,11 +1,10 @@
 <%--
   Created by IntelliJ IDEA.
   User: MirelaDamyanova
-  Date: 12-Jul-18
-  Time: 02:36
+  Date: 13-Jul-18
+  Time: 14:45
   To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+--%><%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +15,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style type="text/css">
         <%@include file="assets/styles/style.css" %>
-        <%@include file="assets/styles/about.css" %>
         <%@include file="assets/styles/normalize.css" %>
     </style>
 </head>
@@ -37,7 +35,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="cats/add">add cat</a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="about">about</a>
                 </li>
             </ul>
@@ -46,26 +44,10 @@
 </header>
 <body>
 <main>
-    <div class="animated fadeIn" id="section-one">
-        <a id="home" class="smooth"></a>
-        <div class="image-feature-about-me">
-        </div>
-        <div class="container-fluid">
-            <h2 class="title-intro text-center">MeowMeow</h2>
-            <div class="row">
-                <div class="col-sm-6">
-                    <h4 class="keywords text-center">dApp....</h4>
-                </div>
-                    <p class="paragraph">
-                        MeowMeow... todo todo
-                    </p>
-            </div>
-        </div>
+    <div class="text-center meow-center">
+        <h1 class="text-on-form">Meow! This is an error page, sorry!</h1>
     </div>
 </main>
-<footer>
-    <p class="container-fluid"><b>MeowMeow</b> by Mirela &copy;</p>
-</footer>
 </body>
 </html>
 <script>

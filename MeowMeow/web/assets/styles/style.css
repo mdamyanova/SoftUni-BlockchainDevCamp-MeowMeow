@@ -1,0 +1,169 @@
+/*fonts*/
+@font-face {
+    font-family: 'Evolventa-Regular';
+    src: url("../fonts/Evolventa-Regular.ttf");
+}
+
+@font-face {
+    font-family: 'Bakery';
+    src: url("../fonts/bakery.otf")
+}
+@font-face {
+    font-family: "that i love you";
+    src: url("../fonts/that i love you - TTF.ttf");
+}
+
+/*main html*/
+* {
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+    min-height: 100%;
+}
+body {
+    height: 100%;
+    font-family: "Evolventa-Regular", sans-serif;
+}
+html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+footer,
+footer p{
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: 2em;
+    text-align: center;
+}
+h1, h2{
+    font-family: "Evolventa-Regular", sans-serif;
+    padding: 2.5rem 0 0 2.5rem;
+    text-align: center;
+}
+h3{
+    padding-top: 100px;
+    text-align: center;
+}
+footer,
+footer p{
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: 2em;
+    text-align: center;
+}
+
+/*scroll me animation*/
+.scroll-me-section{
+    padding-top: 200px;
+    display: block;
+}
+.scroll-me {
+    margin: 190px auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 50px;
+    border: 2px solid #8E8E8E;
+    border-radius: 50px;
+}
+.scroll-me:before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 2px;
+    height: 10px;
+    background-color: #8E8E8E;
+    animation: scrollDown 2s infinite;
+}
+
+@keyframes scrollDown {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 0);
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, 22px);
+    }
+}
+
+/*navigation bar*/
+.navbar{
+    background: #EFEFEF !important;
+}
+.brand{
+    font-family:"Evolventa-Regular", sans-serif;
+    font-weight: bold;
+}
+.hearts{
+    font: 2.0rem "that i love you", sans-serif;
+}
+.navbar-brand{
+    font-family: "Evolventa-Regular", sans-serif;
+    color: #1E1E1E !important;
+    transition: .3s all ease-in;
+}
+.navbar-brand:hover{
+    color: #8E8E8E !important;
+    cursor: pointer;
+}
+
+/*sections*/
+.section{
+    background: white;
+}
+h2{
+    top: 50px;
+    margin: 10px;
+}
+.col-sm-3{
+    bottom: -40px;
+}
+h6{
+    bottom: -40px;
+}
+/*донатъкмяване*/
+.meow-center {
+    left: 0;
+    line-height: 200px;
+    margin: auto;
+    margin-top: -100px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+.title-intro{
+    margin: 2.5rem;
+    letter-spacing: 2px;
+}
+.col-centered{
+    margin:0 auto;
+    width:800px;
+}
+.col-left{
+   margin-left: 100px;
+}
+.link{
+    color: #585858;
+}
+.link:hover{
+    color: #989898;
+}
+.link:visited{
+    color: #D8D8D8;
+}

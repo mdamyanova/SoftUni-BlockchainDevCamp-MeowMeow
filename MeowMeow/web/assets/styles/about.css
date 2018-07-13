@@ -1,0 +1,13 @@
+.big-photo{
+    width: 150%;
+    max-width: 800px;
+    padding-left: 100px;
+    padding-top: 100px;
+}
+.keywords{
+    font-family: "Evolventa-Regular", sans-serif;
+    padding: 1rem 0;
+}
+.list{
+    padding-bottom: 40px;
+}
