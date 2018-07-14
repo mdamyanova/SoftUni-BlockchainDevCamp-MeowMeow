@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: MirelaDamyanova
-  Date: 11-Jul-18
-  Time: 23:03
+  Date: 14-Jul-18
+  Time: 03:33
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -15,43 +15,30 @@
           integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style type="text/css">
-        <%@include file="assets/styles/style.css" %>
-        <%@include file="assets/styles/background.css" %>
-        <%@include file="assets/styles/normalize.css" %>
+        <%@include file="../assets/styles/style.css" %>
+        <%@include file="../assets/styles/normalize.css" %>
     </style>
 </head>
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="home">MeowMeow<span class="hearts">*</span></a>
+        <a class="navbar-brand" href="../home">MeowMeow<span class="hearts">*</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="home">home</a>
-                </li>
-                <% if (session.getAttribute("username") == null) { %>
                 <li class="nav-item">
-                    <a class="nav-link" href="users/login">login</a>
+                    <a class="nav-link" href="../home">home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="users/register">register</a>
-                </li>
-                <% } else { %>
-                <li class="nav-item">
-                    <a class="nav-link" href="users/logout">logout</a>
+                    <a class="nav-link" href="all">cats</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="cats/all">cats</a>
+                    <a class="nav-link" href="add">add cat</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="cats/add">add cat</a>
+                    <a class="nav-link" href="../about">about</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about">about</a>
-                </li>
-                <% } %>
             </ul>
         </div>
     </nav>
@@ -59,19 +46,37 @@
 <body>
 <div id="metamask-warning" class="alert alert-danger" style="display: none"></div>
 <main id="main-content">
-    <div class="text-center meow-center">
-        <h1 class="text-on-form">Hello, human! Welcome to MeowMeow!</h1>
-        <form method="post" action="donate">
-            <label class="sr-only">Amount: </label>
-            <input type="number" class="form-control col-4 offset-4" name="amount">
-            <button type="submit" class="btn btn-default mb-2">donate</button>
-        </form>
-    </div>
+    <h1>Login</h1>
+    <br/>
+    <form method="post" action="/users/register">
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Username: </label>
+            <div class="col-10">
+                <input class="form-control" type="text" name="username">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Password: </label>
+            <div class="col-10">
+                <input class="form-control" type="password" name="password">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-2 col-form-label">Confirm Password: </label>
+            <div class="col-10">
+                <input class="form-control" type="password" name="confirmPassword">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-default">Register</button>
+    </form>
 </main>
 </body>
+<footer>
+    <p><b>MeowMeow</b> by Mirela &copy;</p>
+</footer>
 </html>
 <script>
-    <%@include file="assets/scripts/app.js" %>
+    <%@include file="../assets/scripts/app.js" %>
 </script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

@@ -26,15 +26,11 @@ public class AddCatServlet extends HttpServlet {
         String gender = req.getParameter("gender");
         String town = req.getParameter("town");
         String description = req.getParameter("description");
-
         Part image = req.getPart("image");
         String imageHash = new IPFSServiceImpl().add(image, name); // TODO - This is not good - Fix!
-
         String organization = req.getParameter("organization");
-
         AdoptionCat cat = new AdoptionCat(
                 name, age, gender, town, description, imageHash, organization);
-
         ((AdoptionCatRepository)this.getServletContext().getAttribute("cats")).add(cat);
         // TODO - IPFS JSON file add :))) Important!!!
         resp.sendRedirect("/cats/profile?catName=" + cat.getName());

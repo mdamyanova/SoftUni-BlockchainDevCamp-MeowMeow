@@ -48,7 +48,7 @@
 <main id="main-content">
     <h1>Add Cat for Adoption</h1>
     <br/>
-    <form method="post" action="add">
+    <form method="post" action="/cats/add">
         <div class="form-group row">
             <label class="col-2 col-form-label">Name: </label>
             <div class="col-10">

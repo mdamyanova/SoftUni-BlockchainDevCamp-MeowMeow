@@ -5,7 +5,7 @@ import org.meow.meow.models.AdoptionCat;
 import java.util.*;
 
 public class AdoptionCatRepository  {
-    private ArrayList<AdoptionCat> cats;
+    private List<AdoptionCat> cats;
 
     public AdoptionCatRepository() {
         this.cats = new ArrayList<>();
