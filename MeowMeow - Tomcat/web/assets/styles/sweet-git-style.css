@@ -1,0 +1,81 @@
+.github-profile {
+    margin: 20px 0;
+    position: relative;
+}
+.profile-info {
+    padding: 20px 0 10px 0;
+    background: #fff;
+}
+.profile-photo img {
+    float: none;
+    margin: 0 auto;
+    width: 50%;
+    height: 50%;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;  }
+.profile-pic-names {
+    text-align: center;
+    margin-top: 20px;
+}
+.profile-username {
+
+}
+.profile-fullname {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.profile-info {
+    margin-top: 30px;
+}
+.profile-info .hovereffect {
+    border-bottom: 1px solid #F0F0F0;
+}
+.profile-info .hovereffect:last-child {
+    border-bottom: none;
+}
+.profile-info .hovereffect {
+    font-size: 14px;
+    font-weight: 400;
+}
+.profile-info .hovereffect {
+    margin-right: 8px;
+    font-size: 14px;
+}
+.profile-info .hovereffect:hover {
+    background-color: 	#F0F0F0
+}
+.hovereffect{
+    border-bottom: none;
+}
+.profile-content {
+    padding: 20px;
+    background: #fff;
+    min-height: 460px;
+}
+.p{
+    font-size: 10px;
+}
+.widget{
+    min-height: 10px;
+    max-height: 20px;
+    width: 80%;
+    height: 40%;
+}
+.signature{
+    font-size: 13px;
+}
+li {
+    margin: 0 0 3px 0;
+}
+.link{
+    color: #585858;
+}
+.link:hover{
+    color: #989898;
+}
+.link:visited{
+    color: #D8D8D8;
+}
