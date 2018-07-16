@@ -1,0 +1,22 @@
+.hovereffect {
+
+}
+
+.project-thumbnail {
+    opacity: 1;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.overlay {
+    transition: .5s ease;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.hovereffect:hover .project-thumbnail {
+    opacity: 0.3;
+}
