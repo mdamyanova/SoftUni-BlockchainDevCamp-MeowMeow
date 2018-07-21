@@ -1,12 +1,12 @@
 # MeowMeow
-**MeowMeow** is a DApp (Decentralized Application) implemented with Java and Solidity. The project keeps some data and logic in the Ethereum blockchain and provides an application to access it.
+**MeowMeow** is a DApp (Decentralized Application) implemented with Java, JavaScript and Solidity. The project keeps some data and logic in the Ethereum blockchain and provides an application to access it.
 
 ## General Requirements
 - Smart contracts, implemented in Solidity, deployed in the Ropsten testnet
-- Client-side - JSPs, JavaScript
+- Client-side - JavaScript, React.js
 - Decentralized Storage - IPFS
 - Unit tests - Truffle
-- Server-side logic - JavaEE, Tomcat, Web3j, IPFS
+- Server-side logic - Java, Spring Boot, Web3j, IPFS
 - Token - MEOW token
 
 ## Business Logic
@@ -30,5 +30,4 @@
 - MetaMask right usage
 - Implementing tests
 - Complete UI
-- Interaction with the contract
 - Use MEOW as main currency
